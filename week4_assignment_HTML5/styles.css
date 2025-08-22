@@ -1,0 +1,157 @@
+/* ------------------------------
+   Global Styles & Reset
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #ffe8d6, #ffcad4);
+  color: #222;
+}
+
+/* ------------------------------
+   Header Styles
+------------------------------ */
+.header {
+  background-color: #ffb5a7;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 5px solid #fcd5ce;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* ------------------------------
+   Navigation Bar
+------------------------------ */
+.nav {
+  background-color: #f9dcc4;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #6d6875;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff758f;
+}
+
+/* ------------------------------
+   Main Content
+------------------------------ */
+.main {
+  padding: 2rem;
+}
+
+/* Shared Section Styles */
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Section Specific Backgrounds */
+.section-about {
+  background-color: #ffe5ec;
+}
+
+.section-places {
+  background-color: #d8e2dc;
+}
+
+.section-culture {
+  background-color: #fcd5ce;
+}
+
+/* ------------------------------
+   Grid Layout for Places
+------------------------------ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------
+   Footer Styles
+------------------------------ */
+.footer {
+  background-color: #ffb4a2;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* ------------------------------
+   Media Queries
+------------------------------ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    font-size: 1rem;
+  }
+}
